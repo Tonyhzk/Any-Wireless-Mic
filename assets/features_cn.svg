@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="100%" style="stop-color:#24243e"/>
+    </linearGradient>
+    <linearGradient id="card1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a3e"/>
+      <stop offset="100%" style="stop-color:#2a2a5e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="320" fill="url(#bg)" rx="12"/>
+  <!-- 卡片1: 实时音频 -->
+  <g transform="translate(30, 30)">
+    <rect width="220" height="260" rx="12" fill="url(#card1)" stroke="#3a3a6e" stroke-width="1"/>
+    <text x="110" y="50" text-anchor="middle" font-size="32">🎙️</text>
+    <text x="110" y="85" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC'" font-size="15" font-weight="600" fill="white">实时音频传输</text>
+    <text x="110" y="115" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC'" font-size="12" fill="#9090b0">WiFi 局域网低延迟传输</text>
+    <text x="110" y="135" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC'" font-size="12" fill="#9090b0">质量 1-100 可调</text>
+    <text x="110" y="155" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC'" font-size="12" fill="#9090b0">自动重采样适配</text>
+  </g>
+  <!-- 卡片2: 虚拟麦克风 -->
+  <g transform="translate(270, 30)">
+    <rect width="220" height="260" rx="12" fill="url(#card1)" stroke="#3a3a6e" stroke-width="1"/>
+    <text x="110" y="50" text-anchor="middle" font-size="32">🔊</text>
+    <text x="110" y="85" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC'" font-size="15" font-weight="600" fill="white">虚拟麦克风</text>
+    <text x="110" y="115" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC'" font-size="12" fill="#9090b0">支持 VB-Cable / BlackHole</text>
+    <text x="110" y="135" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC'" font-size="12" fill="#9090b0">兼容腾讯会议、OBS 等</text>
+    <text x="110" y="155" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC'" font-size="12" fill="#9090b0">任意应用可识别</text>
+  </g>
+  <!-- 卡片3: 录制功能 -->
+  <g transform="translate(510, 30)">
+    <rect width="220" height="260" rx="12" fill="url(#card1)" stroke="#3a3a6e" stroke-width="1"/>
+    <text x="110" y="50" text-anchor="middle" font-size="32">⏺️</text>
+    <text x="110" y="85" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC'" font-size="15" font-weight="600" fill="white">录制功能</text>
+    <text x="110" y="115" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC'" font-size="12" fill="#9090b0">本地与远程控制录制</text>
+    <text x="110" y="135" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC'" font-size="12" fill="#9090b0">WAV 格式输出</text>
+    <text x="110" y="155" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC'" font-size="12" fill="#9090b0">波形可视化播放</text>
+  </g>
+  <!-- 卡片4: 文件管理 -->
+  <g transform="translate(750, 30)">
+    <rect width="220" height="260" rx="12" fill="url(#card1)" stroke="#3a3a6e" stroke-width="1"/>
+    <text x="110" y="50" text-anchor="middle" font-size="32">📁</text>
+    <text x="110" y="85" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC'" font-size="15" font-weight="600" fill="white">文件管理</text>
+    <text x="110" y="115" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC'" font-size="12" fill="#9090b0">浏览、播放、下载录音</text>
+    <text x="110" y="135" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC'" font-size="12" fill="#9090b0">安全删除到回收站</text>
+    <text x="110" y="155" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC'" font-size="12" fill="#9090b0">手机端远程操作</text>
+  </g>
+  <!-- 卡片5: 便捷连接 -->
+  <g transform="translate(990, 30)">
+    <rect width="220" height="260" rx="12" fill="url(#card1)" stroke="#3a3a6e" stroke-width="1"/>
+    <text x="110" y="50" text-anchor="middle" font-size="32">📱</text>
+    <text x="110" y="85" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC'" font-size="15" font-weight="600" fill="white">便捷连接</text>
+    <text x="110" y="115" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC'" font-size="12" fill="#9090b0">扫码即连，零配置</text>
+    <text x="110" y="135" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC'" font-size="12" fill="#9090b0">自动生成 HTTPS 证书</text>
+    <text x="110" y="155" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC'" font-size="12" fill="#9090b0">支持任意浏览器</text>
+  </g>
+</svg>

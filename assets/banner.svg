@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="50%" style="stop-color:#302b63"/>
+      <stop offset="100%" style="stop-color:#24243e"/>
+    </linearGradient>
+    <linearGradient id="wave" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d2ff"/>
+      <stop offset="100%" style="stop-color:#7b2ff7"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d2ff;stop-opacity:0.6"/>
+      <stop offset="100%" style="stop-color:#7b2ff7;stop-opacity:0.6"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="1200" height="400" fill="url(#bg)" rx="16"/>
+  <!-- Decorative circles -->
+  <circle cx="100" cy="200" r="180" fill="url(#accent)" opacity="0.08"/>
+  <circle cx="1100" cy="200" r="220" fill="url(#accent)" opacity="0.06"/>
+  <!-- Audio waveform decoration left -->
+  <g transform="translate(80, 160)" opacity="0.5">
+    <rect x="0" y="30" width="4" height="20" rx="2" fill="url(#wave)"/>
+    <rect x="10" y="20" width="4" height="40" rx="2" fill="url(#wave)"/>
+    <rect x="20" y="10" width="4" height="60" rx="2" fill="url(#wave)"/>
+    <rect x="30" y="0" width="4" height="80" rx="2" fill="url(#wave)"/>
+    <rect x="40" y="15" width="4" height="50" rx="2" fill="url(#wave)"/>
+    <rect x="50" y="25" width="4" height="30" rx="2" fill="url(#wave)"/>
+    <rect x="60" y="10" width="4" height="60" rx="2" fill="url(#wave)"/>
+    <rect x="70" y="20" width="4" height="40" rx="2" fill="url(#wave)"/>
+    <rect x="80" y="30" width="4" height="20" rx="2" fill="url(#wave)"/>
+  </g>
+  <!-- Audio waveform decoration right -->
+  <g transform="translate(1030, 160)" opacity="0.5">
+    <rect x="0" y="30" width="4" height="20" rx="2" fill="url(#wave)"/>
+    <rect x="10" y="20" width="4" height="40" rx="2" fill="url(#wave)"/>
+    <rect x="20" y="5" width="4" height="70" rx="2" fill="url(#wave)"/>
+    <rect x="30" y="15" width="4" height="50" rx="2" fill="url(#wave)"/>
+    <rect x="40" y="0" width="4" height="80" rx="2" fill="url(#wave)"/>
+    <rect x="50" y="20" width="4" height="40" rx="2" fill="url(#wave)"/>
+    <rect x="60" y="10" width="4" height="60" rx="2" fill="url(#wave)"/>
+    <rect x="70" y="25" width="4" height="30" rx="2" fill="url(#wave)"/>
+    <rect x="80" y="30" width="4" height="20" rx="2" fill="url(#wave)"/>
+  </g>
+  <!-- Mic icon -->
+  <g transform="translate(540, 80)">
+    <rect x="40" y="0" width="40" height="70" rx="20" fill="none" stroke="url(#wave)" stroke-width="3"/>
+    <path d="M 30 50 Q 30 90 60 90 Q 90 90 90 50" fill="none" stroke="url(#wave)" stroke-width="3"/>
+    <line x1="60" y1="90" x2="60" y2="110" stroke="url(#wave)" stroke-width="3"/>
+    <line x1="45" y1="110" x2="75" y2="110" stroke="url(#wave)" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <!-- WiFi signal arcs -->
+  <g transform="translate(600, 60)" opacity="0.4">
+    <path d="M -15 -10 Q 0 -25 15 -10" fill="none" stroke="#00d2ff" stroke-width="2"/>
+    <path d="M -25 -20 Q 0 -42 25 -20" fill="none" stroke="#00d2ff" stroke-width="2"/>
+    <path d="M -35 -30 Q 0 -60 35 -30" fill="none" stroke="#00d2ff" stroke-width="2"/>
+  </g>
+  <!-- Title -->
+  <text x="600" y="260" text-anchor="middle" font-family="'Segoe UI', 'SF Pro Display', Arial, sans-serif" font-size="52" font-weight="700" fill="white" letter-spacing="2">Any Wireless Mic</text>
+  <!-- Subtitle EN -->
+  <text x="600" y="300" text-anchor="middle" font-family="'Segoe UI', 'SF Pro Display', Arial, sans-serif" font-size="18" fill="#a0a0c0" letter-spacing="1">Turn Any Device into a Wireless Microphone via LAN</text>
+  <!-- Subtitle CN -->
+  <text x="600" y="330" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="16" fill="#8080a0" letter-spacing="1">将任意设备变成电脑的无线麦克风</text>
+  <!-- Tech badges -->
+  <g transform="translate(420, 355)">
+    <rect x="0" y="0" width="70" height="24" rx="12" fill="#302b63" stroke="#5050a0" stroke-width="1"/>
+    <text x="35" y="16" text-anchor="middle" font-family="monospace" font-size="11" fill="#a0a0ff">Flask</text>
+    <rect x="80" y="0" width="90" height="24" rx="12" fill="#302b63" stroke="#5050a0" stroke-width="1"/>
+    <text x="125" y="16" text-anchor="middle" font-family="monospace" font-size="11" fill="#a0a0ff">WebSocket</text>
+    <rect x="180" y="0" width="80" height="24" rx="12" fill="#302b63" stroke="#5050a0" stroke-width="1"/>
+    <text x="220" y="16" text-anchor="middle" font-family="monospace" font-size="11" fill="#a0a0ff">PyAudio</text>
+    <rect x="270" y="0" width="90" height="24" rx="12" fill="#302b63" stroke="#5050a0" stroke-width="1"/>
+    <text x="315" y="16" text-anchor="middle" font-family="monospace" font-size="11" fill="#a0a0ff">Web Audio</text>
+  </g>
+</svg>

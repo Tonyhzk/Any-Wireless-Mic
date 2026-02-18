@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 圆角方形背景 -->
+  <rect x="10" y="10" width="180" height="180" rx="30" fill="#1766b4"/>
+  
+  <!-- 手机外壳 -->
+  <rect x="60" y="35" width="80" height="130" rx="12" fill="#142331" stroke="#21be9f" stroke-width="3"/>
+  
+  <!-- 手机屏幕 -->
+  <rect x="67" y="45" width="66" height="100" rx="6" fill="#50a6c0"/>
+  
+  <!-- 音频波形 -->
+  <path d="M 75 95 L 75 95 L 80 85 L 85 105 L 90 75 L 95 110 L 100 80 L 105 100 L 110 90 L 115 95 L 120 88 L 125 95" 
+        stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round"/>
+  
+  <!-- 麦克风图标（屏幕内） -->
+  <circle cx="100" cy="60" r="8" fill="#FFFFFF"/>
+  <rect x="96" y="55" width="8" height="10" fill="#FFFFFF"/>
+  <path d="M 92 68 Q 92 73, 100 73 Q 108 73, 108 68" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+  
+  <!-- 手机底部 -->
+  <rect x="85" y="150" width="30" height="4" rx="2" fill="#7F8C8D"/>
+  
+  <!-- WiFi图标（右上角） -->
+  <path d="M 150 50 Q 155 50, 157 52" stroke="#1ABC9C" stroke-width="2" fill="none"/>
+  <path d="M 147 55 Q 155 55, 160 60" stroke="#1ABC9C" stroke-width="2" fill="none"/>
+  <circle cx="153" cy="63" r="2" fill="#1ABC9C"/>
+</svg>
