@@ -38,6 +38,7 @@ FILES_TO_BACKUP = [
 # 要跳过的文件夹（支持相对路径和通配符）
 FOLDERS_TO_SKIP = [
     "",
+    "src/records",
     "__pycache__",
     ".pycache",
     "node_modules",
@@ -47,6 +48,7 @@ FOLDERS_TO_SKIP = [
 # 要跳过的文件（支持相对路径和通配符）
 FILES_TO_SKIP = [
     "",
+    "sync_rules_to_clinerules.py",
     "setup_claude_dir.py",
     "*.pyc",
     "*.pyo",

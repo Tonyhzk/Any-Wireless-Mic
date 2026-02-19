@@ -6,7 +6,7 @@ All notable changes to this project will be documented in this file.
 
 ---
 
-## [Unreleased]
+## [1.0.0] - 2026-02-19
 
 ### Initial Release
 
@@ -15,6 +15,7 @@ All notable changes to this project will be documented in this file.
 - **Auto Resampling** - Automatically adapts to different device sample rates
 - **Recording** - Local and remote recording control, WAV format output
 - **Waveform Visualization** - Audio waveform display with click-to-seek
+- **Real-time Waveform** - Live audio level visualization during streaming
 - **Remote File Management** - Browse, play, download, delete recordings from phone
 - **QR Code Connection** - Scan to connect with zero configuration
 - **Auto HTTPS** - Self-signed certificate for browser microphone access
@@ -22,3 +23,4 @@ All notable changes to this project will be documented in this file.
 - **Theme Switching** - Dark and light theme support
 - **Keyboard Shortcuts** - Space play/pause, arrow keys seek
 - **Safe Delete** - Trash or permanent delete option
+- **Modular Architecture** - Clean separation into audio, server, UI, and web modules

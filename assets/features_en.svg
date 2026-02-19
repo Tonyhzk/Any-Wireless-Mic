@@ -1,58 +1,85 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 350">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#0f0c29"/>
       <stop offset="100%" style="stop-color:#24243e"/>
     </linearGradient>
-    <linearGradient id="card1" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="card" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#1a1a3e"/>
       <stop offset="100%" style="stop-color:#2a2a5e"/>
     </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#2a2040"/>
+    </linearGradient>
+    <linearGradient id="goldBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f5a623"/>
+      <stop offset="100%" style="stop-color:#e8d44d"/>
+    </linearGradient>
   </defs>
-  <rect width="1200" height="320" fill="url(#bg)" rx="12"/>
-  <!-- Card 1: Real-time Audio -->
-  <g transform="translate(30, 30)">
-    <rect width="220" height="260" rx="12" fill="url(#card1)" stroke="#3a3a6e" stroke-width="1"/>
-    <text x="110" y="50" text-anchor="middle" font-size="32">🎙️</text>
-    <text x="110" y="85" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="15" font-weight="600" fill="white">Real-time Audio</text>
-    <text x="110" y="115" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="12" fill="#9090b0">Stream audio via WiFi</text>
-    <text x="110" y="135" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="12" fill="#9090b0">with low latency</text>
-    <text x="110" y="155" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="12" fill="#9090b0">Quality adjustable 1-100</text>
+  <rect width="1200" height="350" fill="url(#bg)" rx="12"/>
+
+  <!-- Row 1 -->
+  <!-- Card 1: 32bit Lossless Audio (Highlighted) -->
+  <g transform="translate(30, 25)">
+    <rect width="360" height="140" rx="12" fill="url(#gold)" stroke="url(#goldBorder)" stroke-width="2"/>
+    <text x="52" y="48" font-size="28">🎵</text>
+    <text x="90" y="48" font-family="'Segoe UI', Arial" font-size="18" font-weight="700" fill="#f5a623">32bit Lossless Audio</text>
+    <rect x="290" y="30" width="48" height="24" rx="12" fill="#f5a623" opacity="0.15"/>
+    <text x="314" y="47" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="11" font-weight="600" fill="#f5a623">Float32</text>
+    <text x="24" y="80" font-family="'Segoe UI', Arial" font-size="13" fill="#c0b8d0">44.1kHz / Float32 native lossless streaming</text>
+    <text x="24" y="102" font-family="'Segoe UI', Arial" font-size="13" fill="#c0b8d0">Professional quality for DaVinci Resolve &amp; more</text>
+    <text x="24" y="124" font-family="'Segoe UI', Arial" font-size="13" fill="#c0b8d0">5 quality presets: Smooth / Standard / HQ / Ultra / Native</text>
   </g>
-  <!-- Card 2: Virtual Mic -->
-  <g transform="translate(270, 30)">
-    <rect width="220" height="260" rx="12" fill="url(#card1)" stroke="#3a3a6e" stroke-width="1"/>
-    <text x="110" y="50" text-anchor="middle" font-size="32">🔊</text>
-    <text x="110" y="85" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="15" font-weight="600" fill="white">Virtual Microphone</text>
-    <text x="110" y="115" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="12" fill="#9090b0">Output to VB-Cable</text>
-    <text x="110" y="135" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="12" fill="#9090b0">or BlackHole</text>
-    <text x="110" y="155" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="12" fill="#9090b0">Works with any app</text>
+
+  <!-- Card 2: Real-time Audio -->
+  <g transform="translate(420, 25)">
+    <rect width="360" height="140" rx="12" fill="url(#card)" stroke="#3a3a6e" stroke-width="1"/>
+    <text x="24" y="48" font-size="28">🎙️</text>
+    <text x="62" y="48" font-family="'Segoe UI', Arial" font-size="16" font-weight="600" fill="white">Real-time Streaming</text>
+    <text x="24" y="80" font-family="'Segoe UI', Arial" font-size="13" fill="#9090b0">Low-latency audio via WiFi LAN</text>
+    <text x="24" y="102" font-family="'Segoe UI', Arial" font-size="13" fill="#9090b0">Auto resampling for any device</text>
+    <text x="24" y="124" font-family="'Segoe UI', Arial" font-size="13" fill="#9090b0">Latency as low as ~6ms</text>
   </g>
-  <!-- Card 3: Recording -->
-  <g transform="translate(510, 30)">
-    <rect width="220" height="260" rx="12" fill="url(#card1)" stroke="#3a3a6e" stroke-width="1"/>
-    <text x="110" y="50" text-anchor="middle" font-size="32">⏺️</text>
-    <text x="110" y="85" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="15" font-weight="600" fill="white">Recording</text>
-    <text x="110" y="115" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="12" fill="#9090b0">Local &amp; remote control</text>
-    <text x="110" y="135" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="12" fill="#9090b0">WAV format output</text>
-    <text x="110" y="155" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="12" fill="#9090b0">Waveform visualization</text>
+
+  <!-- Card 3: Virtual Microphone -->
+  <g transform="translate(810, 25)">
+    <rect width="360" height="140" rx="12" fill="url(#card)" stroke="#3a3a6e" stroke-width="1"/>
+    <text x="24" y="48" font-size="28">🔊</text>
+    <text x="62" y="48" font-family="'Segoe UI', Arial" font-size="16" font-weight="600" fill="white">Virtual Microphone</text>
+    <text x="24" y="80" font-family="'Segoe UI', Arial" font-size="13" fill="#9090b0">Output to VB-Cable / BlackHole</text>
+    <text x="24" y="102" font-family="'Segoe UI', Arial" font-size="13" fill="#9090b0">Works with DaVinci, Zoom, OBS &amp; more</text>
+    <text x="24" y="124" font-family="'Segoe UI', Arial" font-size="13" fill="#9090b0">Recognized by any application</text>
   </g>
-  <!-- Card 4: File Management -->
-  <g transform="translate(750, 30)">
-    <rect width="220" height="260" rx="12" fill="url(#card1)" stroke="#3a3a6e" stroke-width="1"/>
-    <text x="110" y="50" text-anchor="middle" font-size="32">📁</text>
-    <text x="110" y="85" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="15" font-weight="600" fill="white">File Management</text>
-    <text x="110" y="115" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="12" fill="#9090b0">Browse, play, download</text>
-    <text x="110" y="135" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="12" fill="#9090b0">Safe delete to trash</text>
-    <text x="110" y="155" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="12" fill="#9090b0">Remote from phone</text>
+
+  <!-- Row 2 -->
+  <!-- Card 4: Recording -->
+  <g transform="translate(30, 185)">
+    <rect width="360" height="140" rx="12" fill="url(#card)" stroke="#3a3a6e" stroke-width="1"/>
+    <text x="24" y="48" font-size="28">⏺️</text>
+    <text x="62" y="48" font-family="'Segoe UI', Arial" font-size="16" font-weight="600" fill="white">Recording &amp; Visualization</text>
+    <text x="24" y="80" font-family="'Segoe UI', Arial" font-size="13" fill="#9090b0">Local &amp; remote recording, WAV output</text>
+    <text x="24" y="102" font-family="'Segoe UI', Arial" font-size="13" fill="#9090b0">Waveform playback with click-to-seek</text>
+    <text x="24" y="124" font-family="'Segoe UI', Arial" font-size="13" fill="#9090b0">Real-time audio level display</text>
   </g>
-  <!-- Card 5: Easy Connect -->
-  <g transform="translate(990, 30)">
-    <rect width="220" height="260" rx="12" fill="url(#card1)" stroke="#3a3a6e" stroke-width="1"/>
-    <text x="110" y="50" text-anchor="middle" font-size="32">📱</text>
-    <text x="110" y="85" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="15" font-weight="600" fill="white">Easy Connect</text>
-    <text x="110" y="115" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="12" fill="#9090b0">QR code scan to join</text>
-    <text x="110" y="135" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="12" fill="#9090b0">Auto HTTPS certificate</text>
-    <text x="110" y="155" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="12" fill="#9090b0">Any browser supported</text>
+
+  <!-- Card 5: File Management -->
+  <g transform="translate(420, 185)">
+    <rect width="360" height="140" rx="12" fill="url(#card)" stroke="#3a3a6e" stroke-width="1"/>
+    <text x="24" y="48" font-size="28">📁</text>
+    <text x="62" y="48" font-family="'Segoe UI', Arial" font-size="16" font-weight="600" fill="white">Remote File Management</text>
+    <text x="24" y="80" font-family="'Segoe UI', Arial" font-size="13" fill="#9090b0">Browse, play, download recordings</text>
+    <text x="24" y="102" font-family="'Segoe UI', Arial" font-size="13" fill="#9090b0">Safe delete to trash</text>
+    <text x="24" y="124" font-family="'Segoe UI', Arial" font-size="13" fill="#9090b0">Dark / Light theme switching</text>
+  </g>
+
+  <!-- Card 6: Easy Connect -->
+  <g transform="translate(810, 185)">
+    <rect width="360" height="140" rx="12" fill="url(#card)" stroke="#3a3a6e" stroke-width="1"/>
+    <text x="24" y="48" font-size="28">📱</text>
+    <text x="62" y="48" font-family="'Segoe UI', Arial" font-size="16" font-weight="600" fill="white">Easy Connect</text>
+    <text x="24" y="80" font-family="'Segoe UI', Arial" font-size="13" fill="#9090b0">QR code scan, zero configuration</text>
+    <text x="24" y="102" font-family="'Segoe UI', Arial" font-size="13" fill="#9090b0">Auto-generated HTTPS certificate</text>
+    <text x="24" y="124" font-family="'Segoe UI', Arial" font-size="13" fill="#9090b0">Works with any browser device</text>
   </g>
 </svg>
