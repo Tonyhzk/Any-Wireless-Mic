@@ -8,25 +8,6 @@ Turn any device with a browser into a wireless microphone for your PC via LAN. W
 
 ---
 
-## Preview
-
-### Desktop
-![Desktop Interface](assets/screenshot_desktop.png)
-
-### Mobile
-![Mobile Interface](assets/screenshot_mobile.png)
-
-### Mobile Recording
-![Mobile Recording](assets/screenshot_mobile_recording.png)
-
-### Mobile File Management
-![Mobile File Management](assets/screenshot_mobile_management.png)
-
-### DaVinci Resolve Recording
-![DaVinci Resolve](assets/screenshot_davinci.png)
-
----
-
 ## Features
 
 ![Features](assets/features_en.svg)
@@ -47,6 +28,25 @@ Turn any device with a browser into a wireless microphone for your PC via LAN. W
 - **Dark / Light Theme** - Modern GUI with theme switching
 - **Keyboard Shortcuts** - Space to play/pause, arrow keys to seek
 - **Safe Delete** - Delete to trash (default) or permanent delete
+
+---
+
+## Preview
+
+### Desktop
+![Desktop Interface](assets/screenshot_desktop.png)
+
+### Mobile
+![Mobile Interface](assets/screenshot_mobile.png)
+
+### Mobile Recording
+![Mobile Recording](assets/screenshot_mobile_recording.png)
+
+### Mobile File Management
+![Mobile File Management](assets/screenshot_mobile_management.png)
+
+### DaVinci Resolve Recording
+![DaVinci Resolve](assets/screenshot_davinci.png)
 
 ---
 

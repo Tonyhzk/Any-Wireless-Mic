@@ -8,25 +8,6 @@
 
 ---
 
-## 界面预览
-
-### 桌面端
-![桌面端界面](assets/screenshot_desktop.jpg)
-
-### 手机端
-![手机端界面](assets/screenshot_mobile.png)
-
-### 手机端录音
-![手机端录音](assets/screenshot_mobile_recording.png)
-
-### 手机端文件管理
-![手机端文件管理](assets/screenshot_mobile_management.png)
-
-### 达芬奇同步录音
-![达芬奇录音](assets/screenshot_davinci.jpg)
-
----
-
 ## 功能特性
 
 ![功能特性](assets/features_cn.svg)
@@ -47,6 +28,25 @@
 - **暗黑/明亮主题** - 现代化 GUI，支持主题切换
 - **快捷键** - 空格播放/暂停，方向键快进/快退
 - **安全删除** - 默认删除到回收站，可切换为永久删除
+
+---
+
+## 界面预览
+
+### 桌面端
+![桌面端界面](assets/screenshot_desktop.jpg)
+
+### 手机端
+![手机端界面](assets/screenshot_mobile.png)
+
+### 手机端录音
+![手机端录音](assets/screenshot_mobile_recording.png)
+
+### 手机端文件管理
+![手机端文件管理](assets/screenshot_mobile_management.png)
+
+### 达芬奇同步录音
+![达芬奇录音](assets/screenshot_davinci.jpg)
 
 ---
 
