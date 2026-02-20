@@ -6,6 +6,16 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [1.0.1] - 2026-02-21
+
+### Improvements
+
+- **Cross-platform Config Directory** - Config files now stored in system standard directories (Windows: `%APPDATA%`, macOS: `~/Library/Application Support`, Linux: `~/.config`)
+- **Flask 3.1 Compatibility** - Fixed session property compatibility between Flask 3.1 and Flask-SocketIO
+- **Version Display** - Show current version number in window title bar
+- **Dependency Pinning** - Pinned all dependency versions in requirements.txt, added cryptography dependency
+- **Build Configuration** - Added macOS/Windows PyInstaller spec files, Inno Setup installer script and packaging assets
+
 ## [1.0.0] - 2026-02-19
 
 ### Initial Release

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+  <rect width="800" height="400" fill="#f0f0f0"/>
+
+  <!-- 箭头线 -->
+  <line x1="310" y1="190" x2="480" y2="190" stroke="#888888" stroke-width="3" stroke-dasharray="12,6"/>
+
+  <!-- 箭头头部 -->
+  <polygon points="490,190 472,178 472,202" fill="#888888"/>
+
+  <!-- 底部提示文字 -->
+  <text x="400" y="340" text-anchor="middle" fill="#666666" font-family="PingFang SC, Helvetica, Arial" font-size="15">拖拽到 Applications 文件夹以安装</text>
+</svg>

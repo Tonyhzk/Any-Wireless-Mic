@@ -57,7 +57,13 @@ class MainWindow(QMainWindow):
         # 路径设置
         self.base_path = Path(getattr(sys, '_MEIPASS', Path(__file__).parent.parent))
         if getattr(sys, 'frozen', False):
-            self.config_dir = Path(sys.executable).parent
+            if sys.platform == 'win32':
+                self.config_dir = Path(os.environ['APPDATA']) / 'Any Wireless Mic'
+            elif sys.platform == 'darwin':
+                self.config_dir = Path.home() / 'Library' / 'Application Support' / 'Any Wireless Mic'
+            else:
+                self.config_dir = Path.home() / '.config' / 'Any Wireless Mic'
+            self.config_dir.mkdir(parents=True, exist_ok=True)
         else:
             self.config_dir = Path(__file__).parent.parent
 
@@ -79,6 +85,19 @@ class MainWindow(QMainWindow):
         # 初始化组件
         self.audio_engine = AudioEngine(self.log_message)
         self.audio_player = AudioPlayer(self.log_message)
+
+        # Flask 3.1 兼容性补丁：RequestContext.session 在 3.1 中变为只读，
+        # 但 Flask-SocketIO 5.6.0 仍会尝试赋值，需要手动添加 setter
+        try:
+            from flask.ctx import RequestContext
+            if RequestContext.session.fset is None:
+                _orig_getter = RequestContext.session.fget
+                RequestContext.session = property(
+                    _orig_getter,
+                    lambda self, value: object.__setattr__(self, '_session', value)
+                )
+        except Exception:
+            pass
 
         # Flask + SocketIO
         self.flask_app = Flask(__name__)

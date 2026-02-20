@@ -5,8 +5,11 @@ from pathlib import Path
 
 import pyaudio
 
+# ========== 版本 ==========
+APP_VERSION = "1.0.1"
+
 # ========== 窗口设置 ==========
-WINDOW_TITLE = "局域网无线麦克风"
+WINDOW_TITLE = f"局域网无线麦克风 v{APP_VERSION}"
 WINDOW_WIDTH = 1200
 WINDOW_HEIGHT = 950
 WINDOW_MIN_WIDTH = 1000

@@ -6,6 +6,16 @@
 
 ---
 
+## [1.0.1] - 2026-02-21
+
+### 改进
+
+- **跨平台配置目录** - 打包后配置文件存放到系统标准目录（Windows: `%APPDATA%`，macOS: `~/Library/Application Support`，Linux: `~/.config`）
+- **Flask 3.1 兼容性** - 修复 Flask 3.1 与 Flask-SocketIO 的 session 属性兼容问题
+- **版本号显示** - 窗口标题栏显示当前版本号
+- **依赖版本锁定** - requirements.txt 固定所有依赖版本，补充 cryptography 依赖
+- **打包配置** - 新增 macOS/Windows 打包 spec 文件、Inno Setup 安装脚本及安装包资源
+
 ## [1.0.0] - 2026-02-19
 
 ### 首次发布
