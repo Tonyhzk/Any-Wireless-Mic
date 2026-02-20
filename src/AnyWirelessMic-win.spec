@@ -23,9 +23,6 @@ a = Analysis(
     datas=[
         ('assets', 'assets'),
         ('web', 'web'),
-        ('server.crt', '.'),
-        ('server.key', '.'),
-        ('mobile_mic_config.json', '.'),
     ],
     hiddenimports=engineio_imports + socketio_imports + eventlet_imports + dns_imports + [
         'flask',

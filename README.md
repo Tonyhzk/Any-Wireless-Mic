@@ -65,7 +65,7 @@
 ## 安装
 
 ```bash
-pip install flask flask-socketio eventlet pyaudio ttkbootstrap qrcode pillow pyopenssl matplotlib numpy send2trash scipy
+pip install flask flask-socketio eventlet pyaudio PySide6 qrcode pillow pyopenssl matplotlib numpy send2trash scipy
 ```
 
 ### 虚拟音频线缆（可选但推荐）
@@ -152,7 +152,7 @@ Any-Wireless-Mic/
 │   ├── config.py              # 配置管理
 │   ├── audio/                 # 音频引擎与播放器
 │   ├── server/                # Flask 服务器与 SSL 证书
-│   ├── ui/                    # GUI 界面 (ttkbootstrap)
+│   ├── ui/                    # GUI 界面 (PySide6)
 │   ├── web/                   # 网页端界面 (HTML)
 │   └── assets/                # 图标资源
 ├── assets/                    # 视觉素材
@@ -173,7 +173,7 @@ Any-Wireless-Mic/
 | 后端 | Flask + Flask-SocketIO (WebSocket) |
 | 前端 | HTML5 + Web Audio API |
 | 音频 | PyAudio |
-| GUI | ttkbootstrap |
+| GUI | PySide6 |
 | 可视化 | Matplotlib |
 | 安全 | pyOpenSSL (自签名 HTTPS) |
 

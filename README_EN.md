@@ -65,7 +65,7 @@ Turn any device with a browser into a wireless microphone for your PC via LAN. W
 ## Installation
 
 ```bash
-pip install flask flask-socketio eventlet pyaudio ttkbootstrap qrcode pillow pyopenssl matplotlib numpy send2trash scipy
+pip install flask flask-socketio eventlet pyaudio PySide6 qrcode pillow pyopenssl matplotlib numpy send2trash scipy
 ```
 
 ### Virtual Audio Cable (Optional but Recommended)
@@ -152,7 +152,7 @@ Any-Wireless-Mic/
 │   ├── config.py              # Configuration management
 │   ├── audio/                 # Audio engine & player
 │   ├── server/                # Flask server & SSL cert
-│   ├── ui/                    # GUI (ttkbootstrap)
+│   ├── ui/                    # GUI (PySide6)
 │   ├── web/                   # Web client (HTML)
 │   └── assets/                # Icons
 ├── assets/                    # Visual assets
@@ -173,7 +173,7 @@ Any-Wireless-Mic/
 | Backend | Flask + Flask-SocketIO (WebSocket) |
 | Frontend | HTML5 + Web Audio API |
 | Audio | PyAudio |
-| GUI | ttkbootstrap |
+| GUI | PySide6 |
 | Visualization | Matplotlib |
 | Security | pyOpenSSL (self-signed HTTPS) |
 
