@@ -273,9 +273,6 @@ class MainWindow(QMainWindow):
         conn_layout.addWidget(self.qr_label)
 
         ip_layout = QVBoxLayout()
-        self.edit_url = QLineEdit("等待服务启动...")
-        self.edit_url.setReadOnly(True)
-        ip_layout.addWidget(self.edit_url)
         ip_layout.addWidget(QLabel("可用连接地址 (双击复制):"))
         self.ip_tree = QTreeWidget()
         self.ip_tree.setHeaderLabels(["连接地址"])
@@ -1072,7 +1069,6 @@ class MainWindow(QMainWindow):
 
     def _update_qr_code(self, url):
         try:
-            self.edit_url.setText(url)
             qr = qrcode.QRCode(version=1, box_size=4, border=2)
             qr.add_data(url)
             qr.make(fit=True)
@@ -1092,9 +1088,8 @@ class MainWindow(QMainWindow):
         items = self.ip_tree.selectedItems()
         if items:
             url = items[0].text(0)
-            if url != self.edit_url.text():
-                self._update_qr_code(url)
-                self.log_message(f"切换连接地址: {url}", "INFO")
+            self._update_qr_code(url)
+            self.log_message(f"切换连接地址: {url}", "INFO")
 
     def _on_ip_double_click(self, item):
         url = item.text(0)

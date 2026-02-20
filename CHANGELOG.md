@@ -6,6 +6,12 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [1.0.2] - 2026-02-21
+
+### Improvements
+
+- **UI Simplification** - Removed redundant URL edit box above the connection address list
+
 ## [1.0.1] - 2026-02-21
 
 ### Improvements
