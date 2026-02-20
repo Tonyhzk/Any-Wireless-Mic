@@ -27,7 +27,7 @@ from flask import Flask
 from flask_socketio import SocketIO
 
 from config import (
-    WINDOW_TITLE, WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_MIN_WIDTH, WINDOW_MIN_HEIGHT,
+    APP_VERSION, WINDOW_TITLE, WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_MIN_WIDTH, WINDOW_MIN_HEIGHT,
     CONFIG_FILE_NAME, LOG_FILE_NAME, CERT_FILE_NAME, KEY_FILE_NAME, RECORD_DIR,
     DEFAULT_PORT, MIN_PORT, MAX_PORT, FORMAT_FLOAT32,
     ENABLE_LOG_FILE, ENABLE_REALTIME_PLAYBACK, DARK_THEME,
@@ -140,6 +140,30 @@ class MainWindow(QMainWindow):
         self._load_existing_records()
 
         self.log_message("程序初始化完成 (空格: 播放/暂停, 左右键: 快进/快退)", "INFO")
+
+        # 后台检测更新
+        threading.Thread(target=self._check_update, daemon=True).start()
+
+    def _check_update(self):
+        """后台检测 GitHub 最新版本"""
+        import urllib.request
+        try:
+            url = "https://api.github.com/repos/Tonyhzk/Any-Wireless-Mic/releases/latest"
+            req = urllib.request.Request(url, headers={"Accept": "application/vnd.github.v3+json"})
+            with urllib.request.urlopen(req, timeout=10) as resp:
+                data = json.loads(resp.read().decode())
+            latest = data.get("tag_name", "").lstrip("vV")
+            if latest and latest != APP_VERSION:
+                self._bridge.schedule_signal.emit(
+                    lambda v=latest: self._show_update_hint(v)
+                )
+        except Exception:
+            pass
+
+    def _show_update_hint(self, version):
+        """在底部栏显示更新提示"""
+        self.lbl_update.setText(f"  🔔 发现新版本 v{version}，点击查看")
+        self.lbl_update.setVisible(True)
 
     def _setup_ui(self):
         central = QWidget()
@@ -368,6 +392,35 @@ class MainWindow(QMainWindow):
         self.log_text.setFixedHeight(80)
         self.log_text.setStyleSheet(f"font-family: Consolas, Menlo, monospace; font-size: 11px;")
         root_layout.addWidget(self.log_text)
+
+        # ===== 底部信息栏：署名 + GitHub =====
+        footer = QHBoxLayout()
+        footer.setContentsMargins(4, 0, 4, 0)
+        lbl_author = QLabel(f"© Tonyhzk  ·  v{APP_VERSION}")
+        lbl_author.setStyleSheet(f"color: {DARK_THEME['text_secondary']}; font-size: 11px;")
+        footer.addWidget(lbl_author)
+        self.lbl_update = QLabel("")
+        self.lbl_update.setStyleSheet(
+            f"color: {DARK_THEME['accent']}; font-size: 11px; cursor: pointer;"
+        )
+        self.lbl_update.setCursor(Qt.PointingHandCursor)
+        self.lbl_update.setVisible(False)
+        self.lbl_update.mousePressEvent = lambda _: webbrowser.open(
+            "https://github.com/Tonyhzk/Any-Wireless-Mic/releases/latest"
+        )
+        footer.addWidget(self.lbl_update)
+        footer.addStretch()
+        btn_github = QPushButton("⭐ GitHub")
+        btn_github.setFixedHeight(22)
+        btn_github.setCursor(Qt.PointingHandCursor)
+        btn_github.setStyleSheet(
+            f"font-size: 11px; padding: 2px 10px; border-radius: 3px;"
+        )
+        btn_github.clicked.connect(
+            lambda: webbrowser.open("https://github.com/Tonyhzk/Any-Wireless-Mic")
+        )
+        footer.addWidget(btn_github)
+        root_layout.addLayout(footer)
 
         # 同步音频引擎状态
         self.audio_engine.enable_monitor_playback = self.chk_monitor.isChecked()

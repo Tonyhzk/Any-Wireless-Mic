@@ -6,6 +6,14 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [1.0.3] - 2026-02-21
+
+### New Features
+
+- **Auto Update Check** - Automatically checks GitHub for new releases on startup, shows non-intrusive notification in footer
+- **GitHub Button** - Quick access to project repository from the footer bar
+- **Author Attribution** - Footer bar now displays author name and version info
+
 ## [1.0.2] - 2026-02-21
 
 ### Improvements
