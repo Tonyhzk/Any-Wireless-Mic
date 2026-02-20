@@ -34,7 +34,7 @@ Turn any device with a browser into a wireless microphone for your PC via LAN. W
 ## Preview
 
 ### Desktop
-![Desktop Interface](assets/screenshot_desktop.png)
+![Desktop Interface](assets/screenshot_desktop.jpg)
 
 ### Mobile
 ![Mobile Interface](assets/screenshot_mobile.png)
@@ -46,7 +46,7 @@ Turn any device with a browser into a wireless microphone for your PC via LAN. W
 ![Mobile File Management](assets/screenshot_mobile_management.png)
 
 ### DaVinci Resolve Recording
-![DaVinci Resolve](assets/screenshot_davinci.png)
+![DaVinci Resolve](assets/screenshot_davinci.jpg)
 
 ---
 
