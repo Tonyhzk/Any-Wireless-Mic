@@ -53,26 +53,34 @@ def _get_wav_duration(filepath):
                 if wave_id != b'WAVE':
                     return 0
                 sample_rate = 44100
-                total_samples = 0
+                channels = 1
+                bits_per_sample = 32
+                data_size = 0
                 while True:
                     chunk_id = f.read(4)
                     if len(chunk_id) < 4:
                         break
                     chunk_size = struct.unpack('<I', f.read(4))[0]
                     if chunk_id == b'fmt ':
+                        fmt_start = f.tell()
                         f.read(2)  # audio_format
-                        f.read(2)  # channels
+                        channels = struct.unpack('<H', f.read(2))[0]
                         sample_rate = struct.unpack('<I', f.read(4))[0]
-                        remaining = chunk_size - 10
+                        f.read(4)  # byte_rate
+                        f.read(2)  # block_align
+                        bits_per_sample = struct.unpack('<H', f.read(2))[0]
+                        remaining = chunk_size - (f.tell() - fmt_start)
                         if remaining > 0:
                             f.read(remaining)
                     elif chunk_id == b'data':
-                        total_samples = chunk_size // 4
+                        data_size = chunk_size
                         break
                     else:
                         f.read(chunk_size)
-                if sample_rate > 0 and total_samples > 0:
-                    return total_samples / sample_rate
+                if sample_rate > 0 and data_size > 0:
+                    bytes_per_frame = (bits_per_sample // 8) * channels
+                    total_frames = data_size // bytes_per_frame
+                    return total_frames / sample_rate
         except:
             pass
     return 0

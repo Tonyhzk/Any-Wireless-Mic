@@ -109,8 +109,8 @@ app = BUNDLE(
     info_plist={
         'CFBundleName': 'Any Wireless Mic',
         'CFBundleDisplayName': 'Any Wireless Mic',
-        'CFBundleShortVersionString': '1.0.3',
-        'CFBundleVersion': '1.0.3',
+        'CFBundleShortVersionString': '1.0.4',
+        'CFBundleVersion': '1.0.4',
         'NSHighResolutionCapable': True,
         'NSMicrophoneUsageDescription': 'This app needs microphone access to function as a wireless microphone.',
         'NSLocalNetworkUsageDescription': 'This app needs local network access to connect devices.',

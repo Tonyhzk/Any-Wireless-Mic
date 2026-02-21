@@ -1,5 +1,5 @@
 #define MyAppName "Any Wireless Mic"
-#define MyAppVersion "1.0.3"
+#define MyAppVersion "1.0.4"
 #define MyAppPublisher "Any Wireless Mic"
 #define MyAppURL "https://github.com/jjp/Any-Wireless-Mic"
 #define MyAppExeName "Any Wireless Mic.exe"

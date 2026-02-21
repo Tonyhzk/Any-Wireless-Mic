@@ -6,6 +6,12 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [1.0.4] - 2026-02-21
+
+### Bug Fixes
+
+- **32-bit WAV Duration Fix** - Fixed incorrect duration display (showing 0) for 32-bit Float32 WAV files in mobile web file list, caused by WAV header parsing offset error
+
 ## [1.0.3] - 2026-02-21
 
 ### New Features
